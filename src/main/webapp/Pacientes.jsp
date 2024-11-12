@@ -3,31 +3,28 @@
 <%@ include file="Components/navBar.jsp"%>
 
 <div class="botones-barra">
-    <!-- Botón Agregar Paciente -->
-    <button class="action-btn agregar-paciente-btn">
-        <i class="fas fa-plus"></i>
+    <button class="action-btn action-btn-agregar" title="Agregar" onclick="abrirFormulario()">
+        <i class="fa fa-plus"></i>
     </button>
-    
-    <!-- Botón Modificar -->
-    <button class="action-btn modificar-paciente-btn">
-        <i class="fas fa-edit"></i>
+    <button class="action-btn action-btn-modificar" title="Modificar">
+        <i class="fa fa-edit"></i>
     </button>
-    
-    <!-- Botón Eliminar -->
-    <button class="action-btn eliminar-paciente-btn">
-        <i class="fas fa-trash"></i>
+    <button class="action-btn action-btn-eliminar" title="Eliminar">
+        <i class="fa fa-trash"></i>
     </button>
-    
-    <!-- Botón Buscar -->
-    <button class="action-btn buscar-btn">
-        <i class="fas fa-search"></i>
+    <button class="action-btn action-btn-buscar" title="Buscar">
+        <i class="fa fa-search"></i>
     </button>
-    
-    <!-- Botón Imprimir -->
-    <button class="action-btn imprimir-btn">
-        <i class="fas fa-print"></i>
+    <button class="action-btn action-btn-imprimir" title="Imprimir">
+        <i class="fa fa-print"></i>
     </button>
 </div>
+
+<script>
+    function abrirFormulario() {
+        window.open("Components/agregarPaciente.jsp", "_blank", "width=600,height=700");
+    }
+</script>
 
 <%@ include file="Components/footer.jsp"%>
         

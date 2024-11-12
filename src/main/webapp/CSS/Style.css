@@ -83,12 +83,17 @@ html, body {
 
 /* Barra de botones */
 .botones-barra {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    position: fixed; /* Para que la barra permanezca en la parte superior al hacer scroll */
+    top: 0;
+    left: 250px; /* Ajusta esto al ancho de tu barra lateral */
+    width: calc(100% - 250px); /* Ancho restante de la pantalla */
+    height: 60px;
     background-color: #2c3e50;
+    display: flex;
+    align-items: center;
     padding: 10px;
-    gap: 20px; /* Espacio entre botones */
+    gap: 10px;
+    z-index: 999; /* Asegura que esté encima del contenido principal */
 }
 
 /* Estilos generales para los botones */
@@ -174,3 +179,97 @@ html, body {
     bottom: 0;
     width: 100%;
 }
+
+ .form-background {
+        background-color: #2c3e50; /* Cambia esto al color exacto de tu navbar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 2rem;
+    }
+
+    /* Contenedor del formulario */
+    .form-container {
+        width: 80%;
+        max-width: 500px;
+        background-color: #ffffff; /* Blanco para el área del formulario */
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container label {
+        margin-top: 0.5rem;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="date"],
+    .form-container textarea {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+        margin-top: 0.3rem;
+    }
+
+    .form-container textarea {
+        resize: none;
+    }
+
+    /* Botones del formulario */
+    .form-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
+
+    .form-action-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .form-action-btn-guardar {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .form-action-btn-guardar:hover {
+        background-color: #218838;
+    }
+
+    .form-action-btn-cancelar {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .form-action-btn-cancelar:hover {
+        background-color: #c82333;
+    }
+    
+    .form-action-btn-reset {
+        background-color: #0c255e;
+        color: white;
+    }
+    
+    .form-action-btn-reset:hover {
+        background-color: #1a54d4;
+        color: white;
+    }
