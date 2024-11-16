@@ -22,12 +22,11 @@
 
 <script>
     function abrirFormulario() {
-        window.open("Components/agregarPaciente.jsp", "_blank", "width=600,height=700");
+        window.open("Components/agregarPaciente.jsp", "width=600,height=700");
     }
 </script>
 
 <%@ include file="Components/footer.jsp"%>
-        
-    </body>
+
 </html>
 
