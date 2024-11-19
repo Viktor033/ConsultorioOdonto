@@ -22,9 +22,10 @@
 
 <script>
     function abrirFormulario() {
-        window.open("Components/agregarPaciente.jsp", "width=600,height=700");
+        window.location.href = "Components/agregarPaciente.jsp";
     }
 </script>
+
 
 <%@ include file="Components/footer.jsp"%>
 

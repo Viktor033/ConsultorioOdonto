@@ -14,27 +14,27 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="dni">DNI:</label>
-                            <input type="text" id="dni" name="dni" placeholder="lo numerito eso laaargo" required>
+                            <input type="text" id="dni" name="dni" placeholder="Numero de Documento" required>
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="como t llama he" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="apellido">Apellido:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Hijo de quien pa so vo" required>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                         </div>
                         <div class="form-group">
                             <label for="telefono">Teléfono:</label>
-                            <input type="text" id="telefono" name="telefono" placeholder="Tene la Hora Ñeri?" required>
+                            <input type="text" id="telefono" name="telefono" placeholder="Numero de Telefono" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" placeholder="Donde VIVI NAEEEE" required>
+                            <input type="text" id="direccion" name="direccion" placeholder="Direccion" required>
                         </div>
                         <div class="form-group">
                             <label for="fechaNacimiento">Fecha de Nacimiento:</label>
@@ -45,17 +45,17 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="obraSocial">Seguro medico:</label>
-                            <input type="text" id="obraSocial" name="obraSocial" placeholder="tu seguro medico pui" required>
+                            <input type="text" id="obraSocial" name="obraSocial" placeholder="Seguro medico, Obra Social, Mutual" required>
                         </div>
                         <div class="form-group">
                             <label for="tutor">Tutor:</label>
-                            <input type="text" id="tutor" name="tutor" placeholder="Quien t Trajo?" required>
+                            <input type="text" id="tutor" name="tutor" placeholder="Tutor" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="descripcion">Descripción:</label>
-                        <textarea id="descripcion" name="descripcion" rows="100" cols="100" placeholder="Detalles adicionales..."></textarea>
+                        <textarea id="descripcion" name="descripcion *(300 caracteres)" rows="6" cols="40" placeholder="Detalles adicionales..."></textarea>
                     </div>
                     <!-- Botones -->
                     <div class="form-buttons">
