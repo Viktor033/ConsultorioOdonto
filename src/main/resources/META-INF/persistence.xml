@@ -3,14 +3,14 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="ConsultorioOdontologicoPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>logica.HistorialMedico</class>
+    <class>logica.Horario</class>
+    <class>logica.Odontograma</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <class>logica.horario</class>
-    <class>logica.secretario</class>
     <class>logica.Persona</class>
-    <class>logica.Usuario</class>
     <class>logica.Turno</class>
     <class>logica.Paciente</class>
-    <class>logica.Odontologo</class>
     <class>logica.Responsable</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/consultorio_odontologico?serverTimezone=UTC"/>
