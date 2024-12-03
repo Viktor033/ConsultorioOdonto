@@ -23,9 +23,6 @@ public class Turno implements Serializable {
     private String hora_Turno;
     private String afeccion;
 
-    @ManyToOne
-    @JoinColumn(name="id_odontologo") // Relación con la entidad Odontologo
-    private Odontologo odonto;
 
     @ManyToOne
     @JoinColumn(name="id_paciente") // Relación con la entidad Paciente
@@ -35,12 +32,11 @@ public class Turno implements Serializable {
     }
 
     // Constructor corregido para incluir las relaciones
-    public Turno(int id_turno, Date fecha_Turno, String hora_Turno, String afeccion, Odontologo odonto, Paciente pacien) {
+    public Turno(int id_turno, Date fecha_Turno, String hora_Turno, String afeccion, Paciente pacien) {
         this.id_turno = id_turno;
         this.fecha_Turno = fecha_Turno;
         this.hora_Turno = hora_Turno;
         this.afeccion = afeccion;
-        this.odonto = odonto;
         this.pacien = pacien;
     }
 
@@ -75,14 +71,6 @@ public class Turno implements Serializable {
 
     public void setAfeccion(String afeccion) {
         this.afeccion = afeccion;
-    }
-
-    public Odontologo getOdonto() {
-        return odonto;
-    }
-
-    public void setOdonto(Odontologo odonto) {
-        this.odonto = odonto;
     }
 
     public Paciente getPacien() {

@@ -1,6 +1,5 @@
-logica\Odontologo.class
-logica\Odontologo_.class
 logica\Responsable_.class
+Cobtroller\exceptions\PreexistingEntityException.class
 logica\Odontograma.class
 logica\Usuario.class
 logica\HistorialMedico_.class
@@ -9,13 +8,16 @@ logica\Persona.class
 vk\consultorioodontologico2\resources\JakartaEE8Resource.class
 logica\Horario.class
 logica\Usuario_.class
-logica\Secretario_.class
 logica\Turno.class
 logica\Odontograma_.class
 logica\Persona_.class
 logica\Paciente_.class
-logica\Secretario.class
 logica\Horario_.class
 logica\Responsable.class
+persistencia\exceptions\NonexistentEntityException.class
 logica\Turno_.class
+persistencia\exceptions\PreexistingEntityException.class
+Cobtroller\exceptions\NonexistentEntityException.class
+persistencia\exceptions\IllegalOrphanException.class
+Cobtroller\exceptions\IllegalOrphanException.class
 logica\HistorialMedico.class

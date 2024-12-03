@@ -3,6 +3,8 @@ package logica;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -13,7 +15,9 @@ import javax.persistence.TemporalType;
 public class HistorialMedico implements Serializable {
 
     @Id
-    private Long dni;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id; // Clave primaria única
+
     @Temporal(TemporalType.DATE)
     private Date fecha_registro;
 
@@ -23,12 +27,14 @@ public class HistorialMedico implements Serializable {
     private String notas_adicionales;
 
     @ManyToOne
-    @JoinColumn(name = "dni", referencedColumnName = "dni")
+    @JoinColumn(name = "dni_paciente", referencedColumnName = "dni") // Relación con Paciente
     private Paciente paciente;
 
+    // Constructor vacío
     public HistorialMedico() {
     }
 
+    // Constructor con parámetros
     public HistorialMedico(Date fecha_registro, String diagnostico, String tratamiento, String medicamentos, String notas_adicionales, Paciente paciente) {
         this.fecha_registro = fecha_registro;
         this.diagnostico = diagnostico;
@@ -39,6 +45,14 @@ public class HistorialMedico implements Serializable {
     }
 
     // Getters y Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Date getFecha_registro() {
         return fecha_registro;

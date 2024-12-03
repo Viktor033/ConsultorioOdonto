@@ -10,14 +10,12 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Turno_ {
 
 	public static volatile SingularAttribute<Turno, String> afeccion;
-	public static volatile SingularAttribute<Turno, Odontologo> odonto;
 	public static volatile SingularAttribute<Turno, Paciente> pacien;
 	public static volatile SingularAttribute<Turno, Date> fecha_Turno;
 	public static volatile SingularAttribute<Turno, Integer> id_turno;
 	public static volatile SingularAttribute<Turno, String> hora_Turno;
 
 	public static final String AFECCION = "afeccion";
-	public static final String ODONTO = "odonto";
 	public static final String PACIEN = "pacien";
 	public static final String FECHA__TURNO = "fecha_Turno";
 	public static final String ID_TURNO = "id_turno";
