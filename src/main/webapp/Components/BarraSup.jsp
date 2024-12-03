@@ -1,7 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file="headJSP.jsp" %>
 
 <div class="botones-barra">
-    <button class="action-btn action-btn-agregar" title="Agregar">
+    <button id="btnAgregar" class="action-btn action-btn-agregar" title="Agregar">
         <i class="fa fa-plus"></i>
     </button>
     <button class="action-btn action-btn-modificar" title="Modificar">
@@ -17,6 +18,8 @@
         <i class="fa fa-print"></i>
     </button>
 </div>
+
+<script src="../JS/scripts.js"></script>
 
 
 

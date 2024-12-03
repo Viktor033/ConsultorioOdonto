@@ -3,7 +3,7 @@
 <%@ include file="/Components/BarraSup.jsp" %>
 <%@ include file="/Components/navBar.jsp" %>
 
-<link rel="stylesheet" href="../CSS/Style.css">
+<link rel="stylesheet" href="/CSS/Style.css">
 <body>
     <div class="main-content">
         <div class="form-background">
@@ -55,8 +55,9 @@
 
                     <div class="form-group">
                         <label for="descripcion">Descripción:</label>
-                        <textarea id="descripcion" name="descripcion *(300 caracteres)" rows="6" cols="40" placeholder="Detalles adicionales..."></textarea>
+                        <textarea id="descripcion" name="descripcion *(300 caracteres)" rows="6" cols="40" placeholder="Detalles adicionales..." style="resize: none;"></textarea>
                     </div>
+
                     <!-- Botones -->
                     <div class="form-buttons">
                         <button type="submit" class="form-action-btn-guardar">Guardar</button>
@@ -67,5 +68,7 @@
             </div>
         </div>
     </div>
+    <script src="../JS/scripts.js"></script>
+
 </body>
 <%@ include file="/Components/footer.jsp" %>

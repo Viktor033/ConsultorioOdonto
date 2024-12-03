@@ -1,9 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Consultorio Odontologico</title>
+        <meta charset="UTF-8">
+        <title>Consultorio Odontológico</title>
         <!-- Enlace al archivo CSS -->
         <link rel="stylesheet" href="CSS/Style.css">
         <!-- FontAwesome para los íconos -->
@@ -17,32 +18,32 @@
                 <div class="icon-container">
                     <i class="fa-solid fa-tooth"></i>
                     <p>Consultorio Odontológico</p>
-                </div>     
+                </div>
                 <ul>
                     <li>
-                        <a href="index.jsp">
+                        <a href="../index.jsp">
                             <i class="fas fa-home"></i> Inicio</a>
-                    </li>        
-                    <li>
-                        <a href="Pacientes.jsp" class="toggle-btn">
-                            <i class="fas fa-users"></i> Pacientes</a> 
                     </li>
                     <li>
-                         <a href="#citas">
-                             <i class="fa-regular fa-calendar"></i> Citas</a>
+                        <a href="./Components/Pacientes.jsp" class="toggle-btn">
+                            <i class="fas fa-users"></i> Pacientes</a>
                     </li>
-                    
+                    <li>
+                        <a href="#citas">
+                            <i class="fa-regular fa-calendar"></i> Citas</a>
+                    </li>
                 </ul>
             </div>
-            
-            <!-- IMG -->    
+
+            <!-- IMG -->
             <div class="contenedor-img">
                 <img src="IMG/logo.png" alt="logo">
             </div>
-           <%@ include file="Components/footer.jsp"%> 
-        <!-- Enlace al archivo JavaScript -->
-        <script src="JS/scripts.js"></script>
-        </div> <!-- Cierre contenedor 
+            <!-- Footer -->
+            <%@ include file="Components/footer.jsp"%>
+            <!-- Enlace al archivo JavaScript -->
+            <script src="JS/scripts.js"></script>
+        </div> <!-- Cierre contenedor -->
     </body>
-    
 </html>
+

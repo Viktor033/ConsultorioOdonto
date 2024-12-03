@@ -1,3 +1,11 @@
+/* Fondo oscuro de la página */
+body {
+    background-color: #F5F5DC;  /* Un tono oscuro */
+    color: #fff;  /* Texto en color blanco para resaltar */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -12,9 +20,8 @@ html {
 
 /* Contenedor principal */
 .container {
-    min-height: 100vh;
-    width: 100%;
     display: flex;
+    min-height: 100vh;
 }
 
 /* Barra de navegación lateral */
@@ -32,6 +39,7 @@ html {
     padding-top: 0;
 }
 
+/* Contenedor de icono en la barra lateral */
 .icon-container {
     display: flex;
     flex-direction: column;
@@ -83,17 +91,19 @@ html {
 
 /* Barra de botones */
 .botones-barra {
-    position: fixed; /* Para que la barra permanezca en la parte superior al hacer scroll */
+    position: fixed; /* Barra fija en la parte superior */
     top: 0;
-    left: 250px; /* Ajusta esto al ancho de tu barra lateral */
-    width: calc(100% - 250px); /* Ancho restante de la pantalla */
-    height: 60px;
-    background-color: #2c3e50;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    z-index: 999; /* Asegura que esté encima del contenido principal */
+    left: 250px; /* Ancho de la barra lateral */
+    width: calc(100% - 250px); /* Ocupa el resto del ancho */
+    height: 60px; /* Altura de la barra */
+    background-color: #2c3e50; /* Color de fondo */
+    display: flex; /* Elementos internos en fila */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px; /* Espaciado interno */
+    gap: 10px; /* Espaciado entre botones */
+    z-index: 999; /* Sobrepone la barra sobre otros elementos */
+    border-bottom: 2px solid #332F2C; /* Borde inferior Gris Oscuro*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Sombra más marcada */
 }
 
 /* Estilos generales para los botones */
@@ -157,16 +167,16 @@ html {
     justify-content: center;
     align-items: center;
     width: calc(100% - 250px);
-    height: 100vh;
+    height: calc(100vh - 60px); /* Ajustado para no sobrepasar el viewport */
     margin-left: 250px;
     overflow: hidden;
 }
 
 .contenedor-img img {
-    max-width: 120%;
-    max-height: 95vh;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    margin-top: -170px;
+    margin-top: 0;
 }
 
 /* Footer */
@@ -185,8 +195,8 @@ html {
     margin-left: 250px; /* Ancho de la barra lateral */
     margin-top: 60px;  /* Altura de la barra superior */
     padding: 20px;
-    background-color: #2c3e50; /* Fondo general */
-    min-height: calc(100vh - 60px); /* Restando el espacio del footer */
+    background-color: #f8f9fa; /* Fondo blanco para el contenido */
+    min-height: calc(100vh - 60px - 60px); /* Restando el espacio del footer */
     box-sizing: border-box;
 }
 
@@ -195,10 +205,12 @@ html {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #515151; /* Gris claro */
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #34495e;  /* Borde oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
+
 
 /* Título del formulario */
 .form-container h2 {
@@ -239,7 +251,7 @@ html {
 
 /* Ajustes para el textarea */
 .form-group textarea {
-    resize: vertical;
+    resize: none; /* Desactiva el redimensionamiento en todos los textareas */
 }
 
 /* Botones de acción del formulario */
@@ -283,4 +295,4 @@ html {
 
 .form-action-btn-reset:hover {
     background-color: #0056b3;
-}
+} 

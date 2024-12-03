@@ -15,8 +15,8 @@ public class Secretario extends Persona { // Cambiado a "Secretario"
     public Secretario() {
     }
 
-    public Secretario(String sector, Usuario unUsuario, int id, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
-        super(id, dni, nombre, apellido, telefono, direccion, fecha_nac);
+    public Secretario(String sector, Usuario unUsuario, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
+        super(dni, nombre, apellido, telefono, direccion, fecha_nac);
         this.sector = sector;
         this.unUsuario = unUsuario;
     }

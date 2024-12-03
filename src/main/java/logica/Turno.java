@@ -1,4 +1,3 @@
-
 package logica;
 
 import java.io.Serializable;
@@ -14,31 +13,38 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Turno implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_turno;
+
     @Temporal(TemporalType.DATE)
     private Date fecha_Turno;
     private String hora_Turno;
     private String afeccion;
+
     @ManyToOne
-    @JoinColumn(name="id_turno")
+    @JoinColumn(name="id_odontologo") // Relación con la entidad Odontologo
     private Odontologo odonto;
+
     @ManyToOne
-    @JoinColumn(name="id_turno2")
+    @JoinColumn(name="id_paciente") // Relación con la entidad Paciente
     private Paciente pacien;
 
     public Turno() {
     }
 
-    public Turno(int id_turno, Date fecha_Turno, String hora_Turno, String afeccion) {
+    // Constructor corregido para incluir las relaciones
+    public Turno(int id_turno, Date fecha_Turno, String hora_Turno, String afeccion, Odontologo odonto, Paciente pacien) {
         this.id_turno = id_turno;
         this.fecha_Turno = fecha_Turno;
         this.hora_Turno = hora_Turno;
         this.afeccion = afeccion;
+        this.odonto = odonto;
+        this.pacien = pacien;
     }
 
+    // Getters y Setters
     public int getId_turno() {
         return id_turno;
     }
@@ -70,7 +76,20 @@ public class Turno implements Serializable {
     public void setAfeccion(String afeccion) {
         this.afeccion = afeccion;
     }
-    
-    
-    
+
+    public Odontologo getOdonto() {
+        return odonto;
+    }
+
+    public void setOdonto(Odontologo odonto) {
+        this.odonto = odonto;
+    }
+
+    public Paciente getPacien() {
+        return pacien;
+    }
+
+    public void setPacien(Paciente pacien) {
+        this.pacien = pacien;
+    }
 }

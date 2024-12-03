@@ -11,27 +11,27 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
 @Entity
-@Inheritance (strategy= InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Persona implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String dni;
+    private String dni; // Ingresado manualmente como identificador único
     private String nombre;
     private String apellido;
     private String telefono;
     private String direccion;
+    
     @Temporal(TemporalType.DATE)
     private Date fecha_nac;
 
+    //Constructor Vacio
     public Persona() {
     }
 
-    public Persona(int id, String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
-        this.id = id;
+    //Constructor con Parametros
+    public Persona(String dni, String nombre, String apellido, String telefono, String direccion, Date fecha_nac) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -40,14 +40,7 @@ public class Persona implements Serializable {
         this.fecha_nac = fecha_nac;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //Getther & Setther
 
     public String getDni() {
         return dni;
@@ -97,7 +90,5 @@ public class Persona implements Serializable {
         this.fecha_nac = fecha_nac;
     }
     
-    
-
-    
 }
+    

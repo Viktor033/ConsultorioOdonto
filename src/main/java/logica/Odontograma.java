@@ -2,7 +2,6 @@ package logica;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.Date;
 import java.util.List;
 
 // Definimos que la clase es una entidad de JPA
@@ -11,11 +10,11 @@ public class Odontograma implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long dni;
 
     // Relación con Paciente
     @ManyToOne
-    @JoinColumn(name = "paciente_id")
+    @JoinColumn(name = "dni")
     private Paciente paciente;
 
     // Relación con Turnos o Consultas
@@ -26,7 +25,8 @@ public class Odontograma implements Serializable {
 
     private String detalles;      // Campo para agregar información específica del odontograma
 
-    public Odontograma() {}
+    public Odontograma() {
+    }
 
     public Odontograma(Paciente paciente, String ultimaConsul, String detalles) {
         this.paciente = paciente;
@@ -34,13 +34,12 @@ public class Odontograma implements Serializable {
         this.detalles = detalles;
     }
 
-    // Getters y setters
-    public Long getId() {
-        return id;
+    public Long getDni() {
+        return dni;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDni(Long dni) {
+        this.dni = dni;
     }
 
     public Paciente getPaciente() {
@@ -75,4 +74,3 @@ public class Odontograma implements Serializable {
         this.detalles = detalles;
     }
 }
-
