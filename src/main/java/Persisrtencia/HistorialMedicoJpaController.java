@@ -22,6 +22,10 @@ public class HistorialMedicoJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
+    
+    public HistorialMedicoJpaController() {
+        emf = Persistencia.createEntityManagerFactory("ConsulOdontPU");
+    }
 
     public void create(HistorialMedico historialMedico) {
         EntityManager em = null;

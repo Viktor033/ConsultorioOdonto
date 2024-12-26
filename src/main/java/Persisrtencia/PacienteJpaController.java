@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Persisrtencia;
 
 import Persisrtencia.exceptions.NonexistentEntityException;
@@ -18,10 +14,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import logica.Paciente;
 
-/**
- *
- * @author vikdu
- */
+
 public class PacienteJpaController implements Serializable {
 
     public PacienteJpaController(EntityManagerFactory emf) {
@@ -31,6 +24,10 @@ public class PacienteJpaController implements Serializable {
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
+    }
+    
+    public PacienteJpaController() {
+        emf = Persistencia.createEntityManagerFactory("ConsulOdontPU");
     }
 
     public void create(Paciente paciente) throws PreexistingEntityException, Exception {

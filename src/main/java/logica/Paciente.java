@@ -18,13 +18,17 @@ public class Paciente extends Persona implements Serializable{
     @OneToMany(mappedBy="pacien")
     private List<Turno> listaTurno;
 
-    public Paciente() {
+    public Paciente(String dniPaciente1, String nombre, String apellido) {
     }
 
     public Paciente(String dniPaciente, Responsable unResponnsable, List<Turno> listaTurno) {
         this.dniPaciente = dniPaciente;
         this.unResponnsable = unResponnsable;
         this.listaTurno = listaTurno;
+    }
+
+    Paciente(String dniPaciente, String nombre, String apellido, String telefono, String direccion) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     //Gethther  & Setther

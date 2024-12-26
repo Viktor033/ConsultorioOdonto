@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Persisrtencia;
 
 import Persisrtencia.exceptions.NonexistentEntityException;
@@ -15,10 +12,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import logica.Horario;
 
-/**
- *
- * @author vikdu
- */
+
 public class HorarioJpaController implements Serializable {
 
     public HorarioJpaController(EntityManagerFactory emf) {
@@ -28,6 +22,10 @@ public class HorarioJpaController implements Serializable {
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
+    }
+    
+    public HorarioJpaController() {
+        emf = Persistencia.createEntityManagerFactory("ConsulOdontPU");
     }
 
     public void create(Horario horario) {

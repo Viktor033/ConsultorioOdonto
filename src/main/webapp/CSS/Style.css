@@ -205,18 +205,18 @@ html {
     width: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #515151; /* Gris claro */
+    background-color: #CDCDCD; /* Gris claro */
     border-radius: 8px;
-    border: 2px solid #34495e;  /* Borde oscuro */
+    border: 2px solid #9D9D9D;  /* Borde oscuro */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 
 /* Título del formulario */
 .form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    color: #000000; 
+    font-weight: bold; 
+    text-align: center; 
 }
 
 /* Estilos para cada fila */
@@ -258,6 +258,7 @@ html {
 .form-action-btn-guardar,
 .form-action-btn-cancelar,
 .form-action-btn-reset {
+    margin: 10px;
     width: 120px; /* Aumenta el ancho del botón */
     height: 50px; /* Aumenta la altura del botón */
     font-size: 18px; /* Tamaño del texto */
